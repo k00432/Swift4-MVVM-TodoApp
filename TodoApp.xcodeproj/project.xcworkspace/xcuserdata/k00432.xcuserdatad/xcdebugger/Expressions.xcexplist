@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "IndexView.tableView(_:commit:forRowAt:):IndexView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IndexView.tableView(_:numberOfRowsInSection:):IndexView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "section">
+            </PersistentString>
+            <PersistentString
+               value = "">
+            </PersistentString>
+            <PersistentString
+               value = "arrayTodo.index(after: 1)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IndexView.tableView(_:cellForRowAt:):IndexView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IndexView.viewDidLoad():IndexView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewModel.getPageTodo(page: 0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IndexView.numberOfSections(in:):IndexView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "53/15">
+            </PersistentString>
+            <PersistentString
+               value = "pageTodo.reserveCapacity(3)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ItemView.tapSaveButton(_:):ItemView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Todo(id: nil,text: textArea.text!, updateTime: nil,createTime: nil)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IndexView.updateTodo():IndexView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewModel.getPageTodo(page: 0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ItemViewModel.saveText(todo:):ItemViewModel.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ItemView.viewDidLoad():ItemView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewModel.getTextArea()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SqliteDbService.getTodo(page:):SqliteDbService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sqlite3_column_int64(tableStatement, 3)">
+            </PersistentString>
+            <PersistentString
+               value = "sqlite3_column_double(tableStatement, 3)">
+            </PersistentString>
+            <PersistentString
+               value = "text.encode(to: String.Encoding.utf8)">
+            </PersistentString>
+            <PersistentString
+               value = "String(cString:sqlite3_column_text(tableStatement, 3))">
+            </PersistentString>
+            <PersistentString
+               value = "Date(sqlite3_column_double(tableStatement, 3))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IndexView.prepare(for:sender:):IndexView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.identifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IndexViewModel.getTodo(index:):IndexViewModel.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SqliteDbService.getPageTodo(page:):SqliteDbService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(cString: sqlite3_column_text(tableStatement, 1))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
