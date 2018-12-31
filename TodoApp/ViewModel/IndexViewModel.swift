@@ -8,9 +8,10 @@ class IndexViewModel{
     var dbService:SqliteDbService=SqliteDbService();
     /*------------------------------------------------funcs-------------------------------------------------*/
 
-    func removeTodo(index:Int) -> Bool{
+    func removeTodo(index:Int,completion:@escaping (Bool)->Void){
         os_log(.info,"IndexViewModel -> removeTodo func : exec (index == %d)",index)
-        return dbService.deleteTodo(index: index)
+        let state = dbService.deleteTodo(index: index)
+        completion(state)
     }
     func updateTodoList(){
         os_log(.info,"IndexViewModel -> updateTodoList func : exec")

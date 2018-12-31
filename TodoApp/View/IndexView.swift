@@ -35,10 +35,10 @@ class IndexView: UITableViewController {
             os_log(.info,"ItemView -> tableView func edit : delect button tap")
             let indexTableCell = tableView.cellForRow(at: indexPath) as! IndexTableCell;
             let id = indexTableCell.id!;
-            if viewModel.removeTodo(index: id) == true{
-                viewModel.updateTodoList();
+            viewModel.removeTodo(index: id,completion:{(isSucc) in
+                self.viewModel.updateTodoList();
                 tableView.deleteRows(at: [indexPath], with: .fade)
-            }
+            })
         }    
     }
     

@@ -28,7 +28,7 @@ class ItemView: UIViewController {
 
     @IBAction func tapSaveButton(_ sender: Any) {
         os_log(.info,"ItemView -> tapSaveButton func : exec (save/edit TextArea)")
-        viewModel.saveText(textArea: textArea.text!, completion:{(isSucc) in
+        viewModel.saveText(textArea: textArea.text!,completion:{(isSucc) in
             os_log(.info,"ItemView -> tapSaveButton func : isSucc == %d",isSucc)
             self.navigationController?.popViewController(animated: true)
         })
