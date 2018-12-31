@@ -22,3 +22,5 @@
 * * *
 
 ### MVC패턴과 MVVM패턴 비교
+
+![img1] (/pigure1.png)
