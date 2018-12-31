@@ -23,4 +23,4 @@
 
 ### MVC패턴과 MVVM패턴 비교
 
-![img1] (/pigure1.png)
+![img1] (https://github.com/k00432/Swift4-MVVM-TodoApp/blob/master/img/pigure1.png?raw=true)
