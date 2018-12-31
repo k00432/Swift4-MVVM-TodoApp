@@ -10,7 +10,7 @@ class ItemView: UIViewController {
     /*------------------------------------------------funcs-----------------------------------------------------*/
     override func viewDidLoad() {
         os_log(.info,"ItemView -> viewDidLoad func : exec")
-        self.textArea.text = viewModel.getTextArea();
+        self.textArea.text = viewModel.todo.text;
         self.placeHolderHide();
     }
     

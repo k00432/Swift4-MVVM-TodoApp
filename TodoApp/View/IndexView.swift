@@ -6,7 +6,7 @@ class IndexView: UITableViewController {
     /*------------------------------------------------funcs-----------------------------------------------------*/
     override func viewWillAppear(_ animated: Bool) {
         os_log(.info,"ItemView -> viewWillAppear func : exec")
-        self.viewModel.getTodoList();
+        self.viewModel.updateTodoList();
         os_log(.info,"ItemView -> viewWillAppear func : reloadData")
         self.tableView.reloadData();
         
@@ -18,15 +18,14 @@ class IndexView: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         os_log(.info,"ItemView -> tableView func row : exec")
-        return viewModel.getTodoLength();
+        return viewModel.todoLength;
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         os_log(.info,"ItemView -> tableView func UITableViewCell : exec")
         let cell = tableView.dequeueReusableCell(withIdentifier: "IndexTableCell", for: indexPath) as! IndexTableCell
-        let (id,text) = viewModel.getTodo(index: indexPath.row)
-        cell.id = id;
-        cell.textButton.text = text;
+        cell.id = viewModel.arrayTodo[indexPath.row].id;
+        cell.textButton.text = viewModel.arrayTodo[indexPath.row].text;
         return cell
     }
 
@@ -37,7 +36,7 @@ class IndexView: UITableViewController {
             let indexTableCell = tableView.cellForRow(at: indexPath) as! IndexTableCell;
             let id = indexTableCell.id!;
             if viewModel.removeTodo(index: id) == true{
-                viewModel.getTodoList();
+                viewModel.updateTodoList();
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }    
@@ -56,10 +55,9 @@ class IndexView: UITableViewController {
         case "editSegue":
             let itemview = segue.destination as! ItemView
             let cell = sender as! IndexTableCell
-            let id = cell.id!;
-            let text = cell.textButton.text!;
-            os_log(.info,"ItemView -> prepare func : itemview viewModel configure (id : %i, text : %@)",id,text)
-            itemview.viewModel.cofigure(id: id, text: text)
+            os_log(.info,"ItemView -> prepare func : itemview viewModel binding (id : %i, text : %@)",cell.id!,cell.textButton.text!)
+            itemview.viewModel.todo.id = cell.id!;
+            itemview.viewModel.todo.text = cell.textButton.text!;
             break;
         default:
             break;
