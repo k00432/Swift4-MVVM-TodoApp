@@ -10,5 +10,5 @@ class Todo {
         self.updateTime = updateTime;
         self.createTime = createTime;
     }
-    
+
 }
